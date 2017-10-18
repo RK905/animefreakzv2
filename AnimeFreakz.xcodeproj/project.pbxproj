@@ -14,6 +14,7 @@
 		0A19F2E21F93141F0060C333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A19F2E01F93141F0060C333 /* LaunchScreen.storyboard */; };
 		0A19F2ED1F931B610060C333 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F2EC1F931B610060C333 /* UIColorExtensions.swift */; };
 		0A19F2EF1F9324EE0060C333 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F2EE1F93241D0060C333 /* GoogleService-Info.plist */; };
+		0A19F3241F96E5B90060C333 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F3231F96E5B90060C333 /* DashboardVC.swift */; };
 		EE9EF6D95669798DF7C402B9 /* Pods_AnimeFreakz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0FFD959D54BADC869A16FE /* Pods_AnimeFreakz.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0A19F2E31F93141F0060C333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A19F2EC1F931B610060C333 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0A19F2EE1F93241D0060C333 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A19F3231F96E5B90060C333 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		3146A5C01980E48B406B7D04 /* Pods-AnimeFreakz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeFreakz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimeFreakz/Pods-AnimeFreakz.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FFD959D54BADC869A16FE /* Pods_AnimeFreakz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeFreakz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A3211391F5D74132B44B05 /* Pods-AnimeFreakz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeFreakz.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimeFreakz/Pods-AnimeFreakz.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				0A19F2DE1F93141F0060C333 /* Assets.xcassets */,
 				0A19F2E01F93141F0060C333 /* LaunchScreen.storyboard */,
 				0A19F2E31F93141F0060C333 /* Info.plist */,
+				0A19F3231F96E5B90060C333 /* DashboardVC.swift */,
 			);
 			path = AnimeFreakz;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A19F2EF1F9324EE0060C333 /* GoogleService-Info.plist in Sources */,
+				0A19F3241F96E5B90060C333 /* DashboardVC.swift in Sources */,
 				0A19F2ED1F931B610060C333 /* UIColorExtensions.swift in Sources */,
 				0A19F2DA1F93141F0060C333 /* ViewController.swift in Sources */,
 				0A19F2D81F93141F0060C333 /* AppDelegate.swift in Sources */,
