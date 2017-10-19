@@ -144,12 +144,33 @@
                                     <action selector="pressSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hE-hd-Oby"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-1I-fpJ">
+                                <rect key="frame" x="69.5" y="474" width="236" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Efo-fd-8e1"/>
+                                    <constraint firstAttribute="width" constant="236" id="eRQ-oq-z7k"/>
+                                </constraints>
+                                <state key="normal" title="Anonymously Login">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressAnonSignin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCN-de-GQV"/>
+                                    <action selector="pressLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yoh-hL-K6a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.058823529411764705" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CYW-HW-W75" firstAttribute="top" secondItem="auS-fc-1Xr" secondAttribute="bottom" constant="8" id="2vL-nu-zus"/>
                             <constraint firstItem="vfB-5v-Pu9" firstAttribute="leading" secondItem="CYW-HW-W75" secondAttribute="trailing" constant="24" id="5d8-bH-UfR"/>
                             <constraint firstItem="voY-4L-iPx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Xs-Mq-o5m"/>
+                            <constraint firstItem="8Ch-1I-fpJ" firstAttribute="top" secondItem="vfB-5v-Pu9" secondAttribute="bottom" constant="44" id="AxO-6B-xlD"/>
                             <constraint firstItem="voY-4L-iPx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NXI-Od-tad"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A8J-eA-uDm" secondAttribute="trailing" constant="16" id="SL0-Yl-TDN"/>
                             <constraint firstItem="Du2-zI-kVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJL-6k-UjW"/>
@@ -161,6 +182,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A8J-eA-uDm" secondAttribute="bottom" constant="16" id="nWN-PR-hAZ"/>
                             <constraint firstItem="vfB-5v-Pu9" firstAttribute="top" secondItem="auS-fc-1Xr" secondAttribute="bottom" constant="8" id="ruc-69-XpB"/>
                             <constraint firstItem="CYW-HW-W75" firstAttribute="leading" secondItem="auS-fc-1Xr" secondAttribute="leading" id="suS-Q5-NUc"/>
+                            <constraint firstItem="8Ch-1I-fpJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vdV-Gn-ie6"/>
                             <constraint firstItem="auS-fc-1Xr" firstAttribute="leading" secondItem="Du2-zI-kVQ" secondAttribute="leading" id="xOO-Ch-dEM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -170,6 +192,7 @@
                         <outlet property="loginView" destination="Du2-zI-kVQ" id="nBM-vX-pNj"/>
                         <outlet property="passView" destination="voY-4L-iPx" id="J5v-Ka-nHR"/>
                         <outlet property="passwordField" destination="5Xu-b3-ecG" id="ljT-KZ-PWA"/>
+                        <outlet property="pressAnon" destination="8Ch-1I-fpJ" id="hFt-yM-r2x"/>
                         <outlet property="registerButton" destination="bcW-09-cxd" id="7hu-5q-MzB"/>
                         <outlet property="saveSwitch" destination="CYW-HW-W75" id="63S-Yw-fwo"/>
                         <outlet property="usernameField" destination="Txe-sB-grT" id="eBg-iI-Lkx"/>
@@ -191,12 +214,16 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zoZ-RM-eN7">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zes-ls-yDn" id="PbP-GU-IPr"/>
+                                    <outlet property="delegate" destination="zes-ls-yDn" id="F52-8J-bY5"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.058823529409999999" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,6 +240,9 @@
                             <color key="tintColor" red="0.90196078431372551" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="996-q4-4iY" id="n7C-gP-5yJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wg0-uM-u8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
