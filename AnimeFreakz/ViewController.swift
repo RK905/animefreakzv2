@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         if let name = defaults.string(forKey: "userNameKey") {
             let pass = defaults.string(forKey: "passWordKey")
             Auth.auth().signIn(withEmail: name, password: pass!) { (user, error) in
-                
+                if(name.count > 1){
                 if error == nil {
                     
                     //Print into the console if successfully logged in
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                     alertController.addAction(defaultAction)
                     
                     self.present(alertController, animated: true, completion: nil)
-                }
+                    }}
             }
         }
     }

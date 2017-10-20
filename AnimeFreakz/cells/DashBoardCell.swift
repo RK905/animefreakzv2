@@ -9,7 +9,7 @@
 import UIKit
 
 class DashBoardCell: UICollectionViewCell {
-
+    @IBOutlet weak var labelView: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,5 +18,6 @@ class DashBoardCell: UICollectionViewCell {
 
     func configureWith(_ model: Dashboard) {
         self.imageView.image = UIImage(named:(model.name?.lowercased())!)
+        self.labelView.text = model.name
     }
 }
