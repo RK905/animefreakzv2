@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="ukl-uj-0cn" customClass="NewsCell" customModule="AnimeFreakz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="285" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNu-3i-13N">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TNu-3i-13N" secondAttribute="height" multiplier="1:1" id="kcS-1B-Efl"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="asX-fH-ANy">
+                        <rect key="frame" x="84" y="0.0" width="223" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJb-YS-iIE">
+                                <rect key="frame" x="0.0" y="0.0" width="223" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8J-lx-BqA">
+                                <rect key="frame" x="0.0" y="20.5" width="223" height="59.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="f8J-lx-BqA" secondAttribute="bottom" id="8z1-FA-QTg"/>
+                            <constraint firstItem="f8J-lx-BqA" firstAttribute="top" secondItem="vJb-YS-iIE" secondAttribute="bottom" id="CIS-h4-jkX"/>
+                            <constraint firstAttribute="trailing" secondItem="f8J-lx-BqA" secondAttribute="trailing" id="TMQ-mJ-egU"/>
+                            <constraint firstItem="vJb-YS-iIE" firstAttribute="top" secondItem="asX-fH-ANy" secondAttribute="top" id="v49-8x-Dog"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="asX-fH-ANy" secondAttribute="trailing" constant="2" id="A2P-GH-xgk"/>
+                <constraint firstItem="asX-fH-ANy" firstAttribute="top" secondItem="ukl-uj-0cn" secondAttribute="top" id="N4F-yf-dkd"/>
+                <constraint firstItem="TNu-3i-13N" firstAttribute="top" secondItem="ukl-uj-0cn" secondAttribute="top" id="Zz3-Tv-uAI"/>
+                <constraint firstAttribute="bottom" secondItem="asX-fH-ANy" secondAttribute="bottom" id="fzh-zJ-lGg"/>
+                <constraint firstItem="asX-fH-ANy" firstAttribute="leading" secondItem="TNu-3i-13N" secondAttribute="trailing" constant="4" id="gys-Kk-57P"/>
+                <constraint firstItem="TNu-3i-13N" firstAttribute="leading" secondItem="ukl-uj-0cn" secondAttribute="leading" id="kUR-Df-Oy7"/>
+                <constraint firstAttribute="bottom" secondItem="TNu-3i-13N" secondAttribute="bottom" id="xZY-zg-Uey"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="q5l-uj-Jz9"/>
+            <size key="customSize" width="285" height="80"/>
+            <connections>
+                <outlet property="homeBody" destination="f8J-lx-BqA" id="1US-QN-4hA"/>
+                <outlet property="homeImg" destination="TNu-3i-13N" id="rgU-3h-3gT"/>
+                <outlet property="homeTitle" destination="vJb-YS-iIE" id="ipE-YF-dBo"/>
+            </connections>
+            <point key="canvasLocation" x="151.5" y="69"/>
+        </collectionViewCell>
+    </objects>
+</document>

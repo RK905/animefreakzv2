@@ -52,5 +52,32 @@ class DashboardVC: UIViewController, UICollectionViewDataSource, UICollectionVie
         return cell
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let selection = self.dashboard[indexPath.row]
+        if canPerformSegue(id: (selection.name?.lowercased())!){
+            self.performSegue (withIdentifier: (selection.name?.lowercased())!, sender: self)}
+     
+        
+        
+    }
+    
 }
+
+extension UIViewController {
+    func canPerformSegue(id: String) -> Bool {
+        let segues = self.value(forKey: "storyboardSegueTemplates") as? [NSObject]
+        let filtered = segues?.filter({ $0.value(forKey: "identifier") as? String == id })
+        return (filtered!.count > 0)
+    }
+    
+    // Just so you dont have to check all the time
+    func performSegue(id: String, sender: AnyObject?) -> Bool {
+        if canPerformSegue(id: id) {
+            self.performSegue(withIdentifier: id, sender: sender)
+            return true
+        }
+        return false
+    }
+}
+
