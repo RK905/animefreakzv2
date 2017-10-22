@@ -24,6 +24,10 @@
 		0A5089111F9AFEF8009CFB87 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A50890F1F9AFEF8009CFB87 /* NewsCell.swift */; };
 		0A5089121F9AFEF8009CFB87 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5089101F9AFEF8009CFB87 /* NewsCell.xib */; };
 		0A5089161F9B0053009CFB87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5089151F9B0053009CFB87 /* Constants.swift */; };
+		0A5089181F9C46D9009CFB87 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5089171F9C46D9009CFB87 /* Quotes.swift */; };
+		0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5089191F9C4959009CFB87 /* QuoteCell.swift */; };
+		0A50891C1F9C4959009CFB87 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A50891A1F9C4959009CFB87 /* QuoteCell.xib */; };
+		0A50891E1F9C4983009CFB87 /* QuotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A50891D1F9C4983009CFB87 /* QuotesVC.swift */; };
 		EE9EF6D95669798DF7C402B9 /* Pods_AnimeFreakz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0FFD959D54BADC869A16FE /* Pods_AnimeFreakz.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		0A50890F1F9AFEF8009CFB87 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		0A5089101F9AFEF8009CFB87 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		0A5089151F9B0053009CFB87 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0A5089171F9C46D9009CFB87 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		0A5089191F9C4959009CFB87 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
+		0A50891A1F9C4959009CFB87 /* QuoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
+		0A50891D1F9C4983009CFB87 /* QuotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesVC.swift; sourceTree = "<group>"; };
 		3146A5C01980E48B406B7D04 /* Pods-AnimeFreakz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeFreakz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimeFreakz/Pods-AnimeFreakz.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FFD959D54BADC869A16FE /* Pods_AnimeFreakz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeFreakz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A3211391F5D74132B44B05 /* Pods-AnimeFreakz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeFreakz.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimeFreakz/Pods-AnimeFreakz.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 				0A19F2E31F93141F0060C333 /* Info.plist */,
 				0A19F3231F96E5B90060C333 /* DashboardVC.swift */,
 				0A50890B1F9AE962009CFB87 /* NewsVC.swift */,
+				0A50891D1F9C4983009CFB87 /* QuotesVC.swift */,
 			);
 			path = AnimeFreakz;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 				0A50890D1F9AECDA009CFB87 /* NewsModel.swift */,
 				0A19F3311F984DE10060C333 /* Dashboard.swift */,
 				0A19F3331F984E700060C333 /* dashboardModel.swift */,
+				0A5089171F9C46D9009CFB87 /* Quotes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +133,8 @@
 		0A19F3351F9850A00060C333 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				0A5089191F9C4959009CFB87 /* QuoteCell.swift */,
+				0A50891A1F9C4959009CFB87 /* QuoteCell.xib */,
 				0A19F3361F9850BC0060C333 /* DashBoardCell.swift */,
 				0A19F3371F9850BC0060C333 /* dashboardCell.xib */,
 				0A50890F1F9AFEF8009CFB87 /* NewsCell.swift */,
@@ -215,6 +227,7 @@
 				0A19F2DF1F93141F0060C333 /* Assets.xcassets in Resources */,
 				0A5089121F9AFEF8009CFB87 /* NewsCell.xib in Resources */,
 				0A19F3391F9850BC0060C333 /* dashboardCell.xib in Resources */,
+				0A50891C1F9C4959009CFB87 /* QuoteCell.xib in Resources */,
 				0A19F2DD1F93141F0060C333 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +326,13 @@
 				0A19F3241F96E5B90060C333 /* DashboardVC.swift in Sources */,
 				0A19F2ED1F931B610060C333 /* UIColorExtensions.swift in Sources */,
 				0A19F3341F984E700060C333 /* dashboardModel.swift in Sources */,
+				0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */,
 				0A50890E1F9AECDA009CFB87 /* NewsModel.swift in Sources */,
+				0A5089181F9C46D9009CFB87 /* Quotes.swift in Sources */,
 				0A19F2DA1F93141F0060C333 /* ViewController.swift in Sources */,
 				0A19F3321F984DE10060C333 /* Dashboard.swift in Sources */,
 				0A19F3381F9850BC0060C333 /* DashBoardCell.swift in Sources */,
+				0A50891E1F9C4983009CFB87 /* QuotesVC.swift in Sources */,
 				0A19F2D81F93141F0060C333 /* AppDelegate.swift in Sources */,
 				0A50890C1F9AE962009CFB87 /* NewsVC.swift in Sources */,
 				0A5089111F9AFEF8009CFB87 /* NewsCell.swift in Sources */,

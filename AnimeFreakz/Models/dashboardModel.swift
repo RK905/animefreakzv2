@@ -13,6 +13,7 @@ import Foundation
 
 public class dashboardModel {
     public var dashboard : Array<Dashboard>?
+    public var quotes : Array<Quotes>?
     
     /**
      Returns an array of models based on given dictionary.
@@ -47,7 +48,9 @@ public class dashboardModel {
     required public init?(dictionary: NSDictionary) {
         
         if (dictionary["dashboard"] != nil) { dashboard = Dashboard.modelsFromDictionaryArray(array: dictionary["dashboard"] as! NSArray) }
+        if (dictionary["quotes"] != nil) { quotes = Quotes.modelsFromDictionaryArray(array: dictionary["quotes"] as! NSArray) }
     }
+
     
     
     /**

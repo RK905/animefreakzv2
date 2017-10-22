@@ -201,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
-        <!--News-->
+        <!--Dashboard-->
         <scene sceneID="daZ-cy-5uC">
             <objects>
-                <viewController title="News" id="zes-ls-yDn" customClass="DashboardVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dashboard" id="zes-ls-yDn" customClass="DashboardVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="Home" id="PSB-yu-oFf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,16 +238,17 @@
                     <connections>
                         <outlet property="collectionView" destination="996-q4-4iY" id="n7C-gP-5yJ"/>
                         <segue destination="0S2-2V-I2G" kind="show" identifier="news" id="cvs-yu-znD"/>
+                        <segue destination="Sx9-7d-TmQ" kind="show" identifier="quotes" id="Ysg-vR-ZcK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wg0-uM-u8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1500" y="31"/>
         </scene>
-        <!--NewsVC-->
+        <!--News-->
         <scene sceneID="Zwh-qs-XO4">
             <objects>
-                <viewController id="0S2-2V-I2G" customClass="NewsVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News" id="0S2-2V-I2G" customClass="NewsVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3eI-S4-6sr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,6 +304,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu3-T8-1mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="712" y="31.484257871064472"/>
+        </scene>
+        <!--Quotes-->
+        <scene sceneID="WXu-mI-ob6">
+            <objects>
+                <viewController title="Quotes" id="Sx9-7d-TmQ" customClass="QuotesVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTQ-jD-Fpp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qgi-xf-1xD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gwt-cD-Wav">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sx9-7d-TmQ" id="qDq-md-6It"/>
+                                    <outlet property="delegate" destination="Sx9-7d-TmQ" id="s9k-4P-JW0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dxj-g8-g6J" firstAttribute="trailing" secondItem="qgi-xf-1xD" secondAttribute="trailing" id="A2s-l4-vHe"/>
+                            <constraint firstItem="qgi-xf-1xD" firstAttribute="leading" secondItem="dxj-g8-g6J" secondAttribute="leading" id="DM4-Ns-ShC"/>
+                            <constraint firstItem="qgi-xf-1xD" firstAttribute="top" secondItem="dxj-g8-g6J" secondAttribute="top" id="b1k-us-6pz"/>
+                            <constraint firstItem="dxj-g8-g6J" firstAttribute="bottom" secondItem="qgi-xf-1xD" secondAttribute="bottom" id="dLa-xS-JKF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dxj-g8-g6J"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qgi-xf-1xD" id="EAl-sm-7Mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V31-xs-qoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="787"/>
         </scene>
     </scenes>
 </document>
