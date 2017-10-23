@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1561201F9D915900C0EE0F /* MusicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A15611F1F9D915900C0EE0F /* MusicVC.swift */; };
+		0A1561231F9D917F00C0EE0F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1561211F9D917F00C0EE0F /* MusicCell.swift */; };
+		0A1561241F9D917F00C0EE0F /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1561221F9D917F00C0EE0F /* MusicCell.xib */; };
+		0A1561261F9D97B300C0EE0F /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1561251F9D97B300C0EE0F /* Music.swift */; };
+		0A1561281F9D999C00C0EE0F /* SwiftyRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1561271F9D999C00C0EE0F /* SwiftyRadio.swift */; };
 		0A19F2D81F93141F0060C333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F2D71F93141F0060C333 /* AppDelegate.swift */; };
 		0A19F2DA1F93141F0060C333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19F2D91F93141F0060C333 /* ViewController.swift */; };
 		0A19F2DD1F93141F0060C333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A19F2DB1F93141F0060C333 /* Main.storyboard */; };
@@ -32,6 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A15611F1F9D915900C0EE0F /* MusicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVC.swift; sourceTree = "<group>"; };
+		0A1561211F9D917F00C0EE0F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		0A1561221F9D917F00C0EE0F /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		0A1561251F9D97B300C0EE0F /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		0A1561271F9D999C00C0EE0F /* SwiftyRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyRadio.swift; sourceTree = "<group>"; };
 		0A19F2D41F93141F0060C333 /* AnimeFreakz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeFreakz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A19F2D71F93141F0060C333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A19F2D91F93141F0060C333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,8 @@
 				0A19F3231F96E5B90060C333 /* DashboardVC.swift */,
 				0A50890B1F9AE962009CFB87 /* NewsVC.swift */,
 				0A50891D1F9C4983009CFB87 /* QuotesVC.swift */,
+				0A15611F1F9D915900C0EE0F /* MusicVC.swift */,
+				0A1561271F9D999C00C0EE0F /* SwiftyRadio.swift */,
 			);
 			path = AnimeFreakz;
 			sourceTree = "<group>";
@@ -122,6 +134,7 @@
 		0A19F32E1F984CEA0060C333 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A1561251F9D97B300C0EE0F /* Music.swift */,
 				0A50890D1F9AECDA009CFB87 /* NewsModel.swift */,
 				0A19F3311F984DE10060C333 /* Dashboard.swift */,
 				0A19F3331F984E700060C333 /* dashboardModel.swift */,
@@ -139,6 +152,8 @@
 				0A19F3371F9850BC0060C333 /* dashboardCell.xib */,
 				0A50890F1F9AFEF8009CFB87 /* NewsCell.swift */,
 				0A5089101F9AFEF8009CFB87 /* NewsCell.xib */,
+				0A1561211F9D917F00C0EE0F /* MusicCell.swift */,
+				0A1561221F9D917F00C0EE0F /* MusicCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -197,6 +212,11 @@
 					0A19F2D31F93141F0060C333 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -228,6 +248,7 @@
 				0A5089121F9AFEF8009CFB87 /* NewsCell.xib in Resources */,
 				0A19F3391F9850BC0060C333 /* dashboardCell.xib in Resources */,
 				0A50891C1F9C4959009CFB87 /* QuoteCell.xib in Resources */,
+				0A1561241F9D917F00C0EE0F /* MusicCell.xib in Resources */,
 				0A19F2DD1F93141F0060C333 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +297,6 @@
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/VegaScrollFlowLayout/VegaScrollFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -288,7 +308,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VegaScrollFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -324,16 +343,20 @@
 			files = (
 				0A19F2EF1F9324EE0060C333 /* GoogleService-Info.plist in Sources */,
 				0A19F3241F96E5B90060C333 /* DashboardVC.swift in Sources */,
+				0A1561201F9D915900C0EE0F /* MusicVC.swift in Sources */,
 				0A19F2ED1F931B610060C333 /* UIColorExtensions.swift in Sources */,
 				0A19F3341F984E700060C333 /* dashboardModel.swift in Sources */,
+				0A1561261F9D97B300C0EE0F /* Music.swift in Sources */,
 				0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */,
 				0A50890E1F9AECDA009CFB87 /* NewsModel.swift in Sources */,
 				0A5089181F9C46D9009CFB87 /* Quotes.swift in Sources */,
 				0A19F2DA1F93141F0060C333 /* ViewController.swift in Sources */,
 				0A19F3321F984DE10060C333 /* Dashboard.swift in Sources */,
+				0A1561231F9D917F00C0EE0F /* MusicCell.swift in Sources */,
 				0A19F3381F9850BC0060C333 /* DashBoardCell.swift in Sources */,
 				0A50891E1F9C4983009CFB87 /* QuotesVC.swift in Sources */,
 				0A19F2D81F93141F0060C333 /* AppDelegate.swift in Sources */,
+				0A1561281F9D999C00C0EE0F /* SwiftyRadio.swift in Sources */,
 				0A50890C1F9AE962009CFB87 /* NewsVC.swift in Sources */,
 				0A5089111F9AFEF8009CFB87 /* NewsCell.swift in Sources */,
 				0A5089161F9B0053009CFB87 /* Constants.swift in Sources */,

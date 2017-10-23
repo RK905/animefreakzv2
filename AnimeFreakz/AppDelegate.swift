@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.configure(withApplicationID: "ca-app-pub-2005397033893588~5270644498")
         
         Fabric.with([Crashlytics.self])
+        
+        UIApplication.shared.beginReceivingRemoteControlEvents()
         return true
     }
 
@@ -49,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        UIApplication.shared.endReceivingRemoteControlEvents()
     }
 
 

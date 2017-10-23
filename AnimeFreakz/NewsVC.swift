@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import VegaScrollFlowLayout
 import KRProgressHUD
 
 class NewsVC: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
@@ -18,11 +17,7 @@ class NewsVC: UIViewController,UICollectionViewDataSource, UICollectionViewDeleg
         super.viewDidLoad()
         let nib = UINib(nibName: cellId, bundle: nil)
         collectionView.register( nib, forCellWithReuseIdentifier: cellId)
-        let layout = VegaScrollFlowLayout()
-        self.collectionView.collectionViewLayout = layout
-        layout.minimumLineSpacing = 20
-        layout.itemSize = CGSize(width: self.collectionView.frame.width, height: 100)
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+
         
         //                    UINavigationBar.appearance().setBackgroundImage(UIImage(named: "banner")!.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch), for: .default)
         

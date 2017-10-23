@@ -25,8 +25,8 @@ class NewsCell: UICollectionViewCell {
     
     
     func configureWith(_ model: NewsModel) {
-        let url = URL(string: model.article_img!)
-        self.homeImg.kf.setImage(with: url)
+        if let url = URL(string: model.article_img!){
+            self.homeImg.kf.setImage(with: url)}
         self.homeTitle.text = model.title
         self.homeBody.text = model.body
     }
