@@ -33,6 +33,8 @@
 		0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5089191F9C4959009CFB87 /* QuoteCell.swift */; };
 		0A50891C1F9C4959009CFB87 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A50891A1F9C4959009CFB87 /* QuoteCell.xib */; };
 		0A50891E1F9C4983009CFB87 /* QuotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A50891D1F9C4983009CFB87 /* QuotesVC.swift */; };
+		0A984D8A1F9FB3BD00B2247A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A984D891F9FB3BD00B2247A /* Channel.swift */; };
+		0A984D8C1F9FB48900B2247A /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A984D8B1F9FB48900B2247A /* CreateChannelCell.swift */; };
 		EE9EF6D95669798DF7C402B9 /* Pods_AnimeFreakz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0FFD959D54BADC869A16FE /* Pods_AnimeFreakz.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,9 @@
 		0A5089191F9C4959009CFB87 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		0A50891A1F9C4959009CFB87 /* QuoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
 		0A50891D1F9C4983009CFB87 /* QuotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesVC.swift; sourceTree = "<group>"; };
+		0A984D891F9FB3BD00B2247A /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		0A984D8B1F9FB48900B2247A /* CreateChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
+		0A984D8D1F9FB4F500B2247A /* AnimeFreakz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimeFreakz.entitlements; sourceTree = "<group>"; };
 		3146A5C01980E48B406B7D04 /* Pods-AnimeFreakz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeFreakz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimeFreakz/Pods-AnimeFreakz.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FFD959D54BADC869A16FE /* Pods_AnimeFreakz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeFreakz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A3211391F5D74132B44B05 /* Pods-AnimeFreakz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeFreakz.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimeFreakz/Pods-AnimeFreakz.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 		0A19F2D61F93141F0060C333 /* AnimeFreakz */ = {
 			isa = PBXGroup;
 			children = (
+				0A984D8D1F9FB4F500B2247A /* AnimeFreakz.entitlements */,
 				0A5089151F9B0053009CFB87 /* Constants.swift */,
 				0A19F3351F9850A00060C333 /* cells */,
 				0A19F32E1F984CEA0060C333 /* Models */,
@@ -139,6 +145,7 @@
 				0A19F3311F984DE10060C333 /* Dashboard.swift */,
 				0A19F3331F984E700060C333 /* dashboardModel.swift */,
 				0A5089171F9C46D9009CFB87 /* Quotes.swift */,
+				0A984D891F9FB3BD00B2247A /* Channel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 				0A5089101F9AFEF8009CFB87 /* NewsCell.xib */,
 				0A1561211F9D917F00C0EE0F /* MusicCell.swift */,
 				0A1561221F9D917F00C0EE0F /* MusicCell.xib */,
+				0A984D8B1F9FB48900B2247A /* CreateChannelCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -214,6 +222,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 						};
@@ -342,10 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A19F2EF1F9324EE0060C333 /* GoogleService-Info.plist in Sources */,
+				0A984D8A1F9FB3BD00B2247A /* Channel.swift in Sources */,
 				0A19F3241F96E5B90060C333 /* DashboardVC.swift in Sources */,
 				0A1561201F9D915900C0EE0F /* MusicVC.swift in Sources */,
 				0A19F2ED1F931B610060C333 /* UIColorExtensions.swift in Sources */,
 				0A19F3341F984E700060C333 /* dashboardModel.swift in Sources */,
+				0A984D8C1F9FB48900B2247A /* CreateChannelCell.swift in Sources */,
 				0A1561261F9D97B300C0EE0F /* Music.swift in Sources */,
 				0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */,
 				0A50890E1F9AECDA009CFB87 /* NewsModel.swift in Sources */,
@@ -497,6 +510,7 @@
 			baseConfigurationReference = 3146A5C01980E48B406B7D04 /* Pods-AnimeFreakz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnimeFreakz/AnimeFreakz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2425856C37;
 				INFOPLIST_FILE = AnimeFreakz/Info.plist;
@@ -514,6 +528,7 @@
 			baseConfigurationReference = C4A3211391F5D74132B44B05 /* Pods-AnimeFreakz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnimeFreakz/AnimeFreakz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2425856C37;
 				INFOPLIST_FILE = AnimeFreakz/Info.plist;
