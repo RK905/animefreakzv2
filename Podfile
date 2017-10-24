@@ -4,7 +4,7 @@
 target 'AnimeFreakz' do
 use_frameworks!
 
-
+pod 'Firebase/Storage'
 pod 'Firebase/Core'
 pod 'Firebase/AdMob'
 pod 'Firebase/Auth'
@@ -15,4 +15,5 @@ pod 'Crashlytics'
 pod 'Kingfisher'
 pod 'KRProgressHUD'
 pod 'OneSignal'
+pod 'JSQMessagesViewController'
 end
