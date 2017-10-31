@@ -27,6 +27,7 @@ class ChatroomVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
         // Do any additional setup after loading the view.
         observeChannels()
+        self.senderDisplayName = "Anon"
     }
     
     deinit {
@@ -90,14 +91,38 @@ class ChatroomVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     }
     
     @IBAction func createChannel(_ sender: AnyObject) {
+        if (newChannelTextField?.text != ""){
         if let name = newChannelTextField?.text { // 1
             let newChannelRef = channelRef.childByAutoId() // 2
             let channelItem = [ // 3
                 "name": name
             ]
             newChannelRef.setValue(channelItem) // 4
+            }}
+        else {
+            let alert = UIAlertController(title: "Empty Field", message: "Please Enter A Channel Name to Create", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let channel = sender as? Channel {
+            let chatVc = segue.destination as! ChatViewController
+            
+            chatVc.senderDisplayName = senderDisplayName
+            chatVc.channel = channel
+            chatVc.channelRef = channelRef.child(channel.id)
+        }
+    }
+    
+ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == Section.currentChannelsSection.rawValue {
+            let channel = channels[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "ShowChannel", sender: channel)
+        }
+    }
 
 }
