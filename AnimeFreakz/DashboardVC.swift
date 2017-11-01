@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class DashboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    private lazy var ref: DatabaseReference = Database.database().reference()
+    private lazy var ref: DatabaseReference = Database.database().reference().child("dashboard")
     private var refHandle: DatabaseHandle?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,8 +31,8 @@ class DashboardVC: UIViewController, UICollectionViewDataSource, UICollectionVie
     override func viewDidAppear(_ animated: Bool) {
      super.viewDidAppear(animated)
         ref.observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            self.dashboard = Dashboard.modelsFromDictionaryArray(array: postDict["dashboard"] as! NSArray)
+      //      let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            self.dashboard = Dashboard.modelsFromDictionaryArray(array: snapshot.value as! NSArray)
             self.collectionView.reloadData()
         })
     }

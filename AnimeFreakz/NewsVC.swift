@@ -8,8 +8,12 @@
 
 import UIKit
 import KRProgressHUD
+import FirebaseDatabase
 
 class NewsVC: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
+    private lazy var ref: DatabaseReference = Database.database().reference().child("news")
+    private var refHandle: DatabaseHandle?
+    
     var models:[NewsModel] = []
     let cellId = "NewsCell"
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,7 +30,14 @@ class NewsVC: UIViewController,UICollectionViewDataSource, UICollectionViewDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.getJsonFromUrl()
+        //self.getJsonFromUrl()
+        
+            ref.observe(DataEventType.value, with: { (snapshot) in
+                //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+                self.models = NewsModel.modelsFromDictionaryArray(array: snapshot.value as! NSArray)
+                self.collectionView.reloadData()
+            })
+  
         
     }
     override func didReceiveMemoryWarning() {
