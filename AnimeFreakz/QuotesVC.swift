@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class QuotesVC: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate  {
-    private lazy var ref: DatabaseReference = Database.database().reference()
+    private lazy var ref: DatabaseReference = Database.database().reference().child("quotes")
     private var refHandle: DatabaseHandle?
     @IBOutlet weak var collectionView : UICollectionView!
     let cellId = "QuoteCell"
@@ -27,8 +27,8 @@ class QuotesVC: UIViewController,UICollectionViewDataSource, UICollectionViewDel
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         ref.observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            self.quotes = Quotes.modelsFromDictionaryArray(array: postDict["quotes"] as! NSArray)
+            //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            self.quotes = Quotes.modelsFromDictionaryArray(array: snapshot.value as! NSArray)
             self.collectionView.reloadData()
         })
     }

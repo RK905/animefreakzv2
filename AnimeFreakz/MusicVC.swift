@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    private lazy var ref: DatabaseReference = Database.database().reference()
+    private lazy var ref: DatabaseReference = Database.database().reference().child("music")
     private var refHandle: DatabaseHandle?
     
     @IBOutlet weak var tableView : UITableView!
@@ -51,8 +51,8 @@ class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         ref.observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            self.musics = Music.modelsFromDictionaryArray(array: postDict["music"] as! NSArray)
+           //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            self.musics = Music.modelsFromDictionaryArray(array: snapshot.value as! NSArray)
             self.tableView.reloadData()
         })
     }
