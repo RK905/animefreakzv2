@@ -9,7 +9,23 @@
 import UIKit
 import FirebaseDatabase
 
-class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource,MusicCellDelegate {
+    func startRadioWith(_ station: Music?) {
+        if(swiftyRadio.isPlaying() == true){
+            self.swiftyRadio.stop()
+            self.swiftyRadio.setStation(name: "Radio", URL: (station?.url)!)
+            self.swiftyRadio.play()
+        }else {
+            self.swiftyRadio.setStation(name: "Radio", URL: (station?.url)!)
+            self.swiftyRadio.play()
+        }
+    }
+    
+    
+    func stopMusic() {
+    self.swiftyRadio.stop()
+    }
+    
     private lazy var ref: DatabaseReference = Database.database().reference().child("music")
     private var refHandle: DatabaseHandle?
     
@@ -18,6 +34,7 @@ class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let cellId = "MusicCell"
     var musics : [Music] = []
     let cellSpacingHeight: CGFloat = 5
+    var swiftyRadio: SwiftyRadio = SwiftyRadio()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +44,14 @@ class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.register(nib, forCellReuseIdentifier: cellId)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 180.0
-  
+        self.swiftyRadio.setup()
+
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.stopMusic()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -62,6 +84,7 @@ class MusicVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId)! as! MusicCell
         cell.configureWith(musics[indexPath.section])
+        cell.delegate = self;
         return cell
     }
     

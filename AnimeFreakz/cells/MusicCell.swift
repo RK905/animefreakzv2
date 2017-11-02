@@ -9,8 +9,14 @@
 import UIKit
 import Kingfisher
 
-class MusicCell: UITableViewCell {
+protocol MusicCellDelegate: class {
+    func startRadioWith(_ station: Music?)
+    func stopMusic()
+}
 
+class MusicCell: UITableViewCell {
+    weak var delegate: MusicCellDelegate?
+    var radioStr : Music?
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 14
@@ -22,7 +28,6 @@ class MusicCell: UITableViewCell {
     
     
 
-    var swiftyRadio: SwiftyRadio = SwiftyRadio()
     @IBOutlet weak var imageBox: UIImageView!
     @IBOutlet weak var name: UILabel!
     
@@ -37,15 +42,15 @@ class MusicCell: UITableViewCell {
         if let url = URL(string: model.image!){
             self.imageBox.kf.setImage(with: url)
         }
-        self.swiftyRadio.setup()
-        self.swiftyRadio.setStation(name: model.name!, URL: model.url!)
-        
+        self.radioStr = model
+    }
+    
+    @IBAction func pressStop(_ sender: Any) {
+        delegate?.stopMusic()
     }
     
     @IBAction func pressPlay(_ sender: Any) {
-        swiftyRadio.play()
-    }
-    @IBAction func pressStop(_ sender: Any) {
-        swiftyRadio.stop()
+        delegate?.startRadioWith(self.radioStr)
     }
 }
+

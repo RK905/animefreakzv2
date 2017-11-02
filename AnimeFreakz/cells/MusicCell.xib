@@ -36,14 +36,14 @@
                         <rect key="frame" x="272" y="139.5" width="32" height="37.5"/>
                         <state key="normal" title="Stop"/>
                         <connections>
-                            <action selector="pressStop:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZMb-6d-mvx"/>
+                            <action selector="pressStop:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JgF-F8-BrD"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eG-8l-Gl2">
                         <rect key="frame" x="16" y="139.5" width="30" height="37.5"/>
                         <state key="normal" title="Play"/>
                         <connections>
-                            <action selector="pressPlay:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eRW-DE-peL"/>
+                            <action selector="pressPlay:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Cfn-55-xtL"/>
                         </connections>
                     </button>
                 </subviews>
