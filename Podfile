@@ -4,6 +4,7 @@
 target 'AnimeFreakz' do
 use_frameworks!
 
+pod 'Firebase/Messaging'
 pod 'Firebase/Storage'
 pod 'Firebase/Core'
 pod 'Firebase/AdMob'

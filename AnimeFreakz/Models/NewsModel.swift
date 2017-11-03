@@ -32,7 +32,11 @@ public class NewsModel {
         var models:[NewsModel] = []
         for item in array
         {
-            models.append(NewsModel(dictionary: item as! NSDictionary)!)
+            if let newsitem :NSDictionary = item as? NSDictionary { 
+                models.append(NewsModel(dictionary: newsitem)!)
+            } else {
+                //is nil
+            }
         }
         return models
     }
