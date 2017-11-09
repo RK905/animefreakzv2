@@ -35,6 +35,12 @@
 		0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5089191F9C4959009CFB87 /* QuoteCell.swift */; };
 		0A50891C1F9C4959009CFB87 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A50891A1F9C4959009CFB87 /* QuoteCell.xib */; };
 		0A50891E1F9C4983009CFB87 /* QuotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A50891D1F9C4983009CFB87 /* QuotesVC.swift */; };
+		0A89B44B1FB3E3E2003F32BA /* WeeklysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89B44A1FB3E3E2003F32BA /* WeeklysVC.swift */; };
+		0A89B44D1FB3E5A8003F32BA /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89B44C1FB3E5A8003F32BA /* Items.swift */; };
+		0A89B4511FB3EDC8003F32BA /* Items_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89B4501FB3EDC8003F32BA /* Items_Base.swift */; };
+		0A89B4541FB40747003F32BA /* weeklyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89B4521FB40747003F32BA /* weeklyCell.swift */; };
+		0A89B4551FB40747003F32BA /* weeklyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A89B4531FB40747003F32BA /* weeklyCell.xib */; };
+		0A89B4571FB41CB5003F32BA /* streamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89B4561FB41CB5003F32BA /* streamVC.swift */; };
 		0A984D8A1F9FB3BD00B2247A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A984D891F9FB3BD00B2247A /* Channel.swift */; };
 		0A984D8C1F9FB48900B2247A /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A984D8B1F9FB48900B2247A /* CreateChannelCell.swift */; };
 		0A984D8F1F9FB56E00B2247A /* ChatroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A984D8E1F9FB56E00B2247A /* ChatroomVC.swift */; };
@@ -74,6 +80,12 @@
 		0A5089191F9C4959009CFB87 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		0A50891A1F9C4959009CFB87 /* QuoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
 		0A50891D1F9C4983009CFB87 /* QuotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesVC.swift; sourceTree = "<group>"; };
+		0A89B44A1FB3E3E2003F32BA /* WeeklysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklysVC.swift; sourceTree = "<group>"; };
+		0A89B44C1FB3E5A8003F32BA /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		0A89B4501FB3EDC8003F32BA /* Items_Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items_Base.swift; sourceTree = "<group>"; };
+		0A89B4521FB40747003F32BA /* weeklyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weeklyCell.swift; sourceTree = "<group>"; };
+		0A89B4531FB40747003F32BA /* weeklyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weeklyCell.xib; sourceTree = "<group>"; };
+		0A89B4561FB41CB5003F32BA /* streamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = streamVC.swift; sourceTree = "<group>"; };
 		0A984D891F9FB3BD00B2247A /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		0A984D8B1F9FB48900B2247A /* CreateChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
 		0A984D8D1F9FB4F500B2247A /* AnimeFreakz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimeFreakz.entitlements; sourceTree = "<group>"; };
@@ -139,6 +151,8 @@
 				0AF541B11FA8F78A00133A6E /* ChatViewController.swift */,
 				0A505EF01FAABED70064F96F /* ProfileVC.swift */,
 				0A4275C11FAC104500ADDA27 /* WebView.swift */,
+				0A89B44A1FB3E3E2003F32BA /* WeeklysVC.swift */,
+				0A89B4561FB41CB5003F32BA /* streamVC.swift */,
 			);
 			path = AnimeFreakz;
 			sourceTree = "<group>";
@@ -155,12 +169,14 @@
 		0A19F32E1F984CEA0060C333 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A89B44C1FB3E5A8003F32BA /* Items.swift */,
 				0A1561251F9D97B300C0EE0F /* Music.swift */,
 				0A50890D1F9AECDA009CFB87 /* NewsModel.swift */,
 				0A19F3311F984DE10060C333 /* Dashboard.swift */,
 				0A19F3331F984E700060C333 /* dashboardModel.swift */,
 				0A5089171F9C46D9009CFB87 /* Quotes.swift */,
 				0A984D891F9FB3BD00B2247A /* Channel.swift */,
+				0A89B4501FB3EDC8003F32BA /* Items_Base.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +193,8 @@
 				0A1561211F9D917F00C0EE0F /* MusicCell.swift */,
 				0A1561221F9D917F00C0EE0F /* MusicCell.xib */,
 				0A984D8B1F9FB48900B2247A /* CreateChannelCell.swift */,
+				0A89B4521FB40747003F32BA /* weeklyCell.swift */,
+				0A89B4531FB40747003F32BA /* weeklyCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -269,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A89B4551FB40747003F32BA /* weeklyCell.xib in Resources */,
 				0A19F2E21F93141F0060C333 /* LaunchScreen.storyboard in Resources */,
 				0A19F2DF1F93141F0060C333 /* Assets.xcassets in Resources */,
 				0A5089121F9AFEF8009CFB87 /* NewsCell.xib in Resources */,
@@ -375,6 +394,8 @@
 				0A984D8A1F9FB3BD00B2247A /* Channel.swift in Sources */,
 				0AF541B41FA8FD2A00133A6E /* Gif.swift in Sources */,
 				0A19F3241F96E5B90060C333 /* DashboardVC.swift in Sources */,
+				0A89B4541FB40747003F32BA /* weeklyCell.swift in Sources */,
+				0A89B44D1FB3E5A8003F32BA /* Items.swift in Sources */,
 				0A1561201F9D915900C0EE0F /* MusicVC.swift in Sources */,
 				0A505EF11FAABED70064F96F /* ProfileVC.swift in Sources */,
 				0A19F2ED1F931B610060C333 /* UIColorExtensions.swift in Sources */,
@@ -383,9 +404,11 @@
 				0A984D8F1F9FB56E00B2247A /* ChatroomVC.swift in Sources */,
 				0A1561261F9D97B300C0EE0F /* Music.swift in Sources */,
 				0A50891B1F9C4959009CFB87 /* QuoteCell.swift in Sources */,
+				0A89B4511FB3EDC8003F32BA /* Items_Base.swift in Sources */,
 				0A50890E1F9AECDA009CFB87 /* NewsModel.swift in Sources */,
 				0A5089181F9C46D9009CFB87 /* Quotes.swift in Sources */,
 				0A19F2DA1F93141F0060C333 /* ViewController.swift in Sources */,
+				0A89B4571FB41CB5003F32BA /* streamVC.swift in Sources */,
 				0A4275C21FAC104500ADDA27 /* WebView.swift in Sources */,
 				0A19F3321F984DE10060C333 /* Dashboard.swift in Sources */,
 				0A1561231F9D917F00C0EE0F /* MusicCell.swift in Sources */,
@@ -394,6 +417,7 @@
 				0A50891E1F9C4983009CFB87 /* QuotesVC.swift in Sources */,
 				0A19F2D81F93141F0060C333 /* AppDelegate.swift in Sources */,
 				0A1561281F9D999C00C0EE0F /* SwiftyRadio.swift in Sources */,
+				0A89B44B1FB3E3E2003F32BA /* WeeklysVC.swift in Sources */,
 				0A50890C1F9AE962009CFB87 /* NewsVC.swift in Sources */,
 				0A5089111F9AFEF8009CFB87 /* NewsCell.swift in Sources */,
 				0A5089161F9B0053009CFB87 /* Constants.swift in Sources */,

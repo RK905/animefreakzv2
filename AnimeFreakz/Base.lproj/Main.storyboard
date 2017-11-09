@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -244,11 +244,63 @@
                         <segue destination="aHM-W4-ScP" kind="show" identifier="chatroom" id="HhK-jz-qMf"/>
                         <segue destination="rBK-UV-tsg" kind="show" identifier="profile" id="4Li-lN-jGD"/>
                         <segue destination="eRK-ce-fhM" kind="show" identifier="forum" id="uEj-5x-XnD"/>
+                        <segue destination="IO4-JT-Nag" kind="show" identifier="weeklys" id="bCT-1R-3WM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wg0-uM-u8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1500" y="31"/>
+        </scene>
+        <!--WeeklysVC-->
+        <scene sceneID="9Ra-Vd-QD4">
+            <objects>
+                <tableViewController id="IO4-JT-Nag" customClass="WeeklysVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="be8-kT-Jx3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="IO4-JT-Nag" id="07g-DL-ZaW"/>
+                            <outlet property="delegate" destination="IO4-JT-Nag" id="IOS-4U-6yD"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="4yz-6D-9Zt" kind="show" identifier="stream" id="vD7-mv-Ucq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XsP-fl-XwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="1522"/>
+        </scene>
+        <!--StreamVC-->
+        <scene sceneID="uzW-Gu-uzs">
+            <objects>
+                <viewController id="4yz-6D-9Zt" customClass="streamVC" customModule="AnimeFreakz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7D-M5-fYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kna-jw-6cx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W05-0f-Fm6" firstAttribute="trailing" secondItem="kna-jw-6cx" secondAttribute="trailing" id="2oM-VW-G1K"/>
+                            <constraint firstItem="W05-0f-Fm6" firstAttribute="bottom" secondItem="kna-jw-6cx" secondAttribute="bottom" id="8Ga-zm-ph1"/>
+                            <constraint firstItem="kna-jw-6cx" firstAttribute="leading" secondItem="W05-0f-Fm6" secondAttribute="leading" id="RoP-UY-L1L"/>
+                            <constraint firstItem="kna-jw-6cx" firstAttribute="top" secondItem="W05-0f-Fm6" secondAttribute="top" id="y6a-gB-cUZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W05-0f-Fm6"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="kna-jw-6cx" id="9nH-tC-xGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekg-Af-wIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2315" y="1531"/>
         </scene>
         <!--News-->
         <scene sceneID="Zwh-qs-XO4">
@@ -450,12 +502,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a New Channel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-l0-3DT">
-                                                    <rect key="frame" x="16" y="7" width="297" height="30"/>
+                                                    <rect key="frame" x="23" y="7" width="283" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHD-b1-Tnr">
-                                                    <rect key="frame" x="321" y="7" width="46" height="30"/>
+                                                    <rect key="frame" x="314" y="7" width="46" height="30"/>
                                                     <state key="normal" title="Create"/>
                                                     <connections>
                                                         <action selector="createChannel:" destination="aHM-W4-ScP" eventType="touchUpInside" id="aKS-Ch-6LU"/>

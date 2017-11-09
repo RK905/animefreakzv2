@@ -9,4 +9,5 @@
 struct Constants {
     static let homeApi = "http://animefreakz.net/api/animefreakz_media.json"
     static let homeNewsApi = "http://animefreakz.net/api/home.json"
+    static let weeklysApi = "http://projects.geeksdobyte.com/animemobile/newest.php"
 }
