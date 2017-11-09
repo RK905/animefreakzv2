@@ -20,7 +20,15 @@ class streamVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print(self.streamURL!)
+        print(self.streamURL)
+        let prefs = UserDefaults.standard
+        if let stringVid = prefs.string(forKey: "video") {
+            let request = URLRequest(url: URL(string:stringVid)!);
+            webView.loadRequest(request);
+        }else {
+            
+        }
+       
 
     }
 

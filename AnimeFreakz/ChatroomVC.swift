@@ -27,7 +27,17 @@ class ChatroomVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
         // Do any additional setup after loading the view.
         observeChannels()
-        self.senderDisplayName = "Anon"
+        
+        if Auth.auth().currentUser != nil {
+            if (Auth.auth().currentUser?.isAnonymous)! {
+                self.senderDisplayName = "Anon"
+            }else {
+                self.senderDisplayName = Auth.auth().currentUser?.displayName
+                
+            }
+        }else {
+            self.senderDisplayName = "Anon"
+        }
     }
     
     deinit {

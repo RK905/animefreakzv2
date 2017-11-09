@@ -78,26 +78,19 @@ var tableArray = [Items] ()
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-                self.performSegue(withIdentifier: "stream", sender: indexPath)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "stream" {
-         var seriesVC = segue.destination as! streamVC
-         var episodeLink = String ()
-         let selectedIndexPath = sender as? NSIndexPath
-        if let url = URL(string: self.tableArray[(selectedIndexPath?.row)!].itemLink!) {
+     
+        if let url = URL(string: self.tableArray[indexPath.row].itemLink!) {
             do {
                 let contents = try String(contentsOf: url)
                 let linkRegexPattern = "\"(.*?)https?.*?\\.mp4.*?\"(.*?)"
                 let matched = matches(for: linkRegexPattern, in: contents)
                 let videoLink = matched[0] as String
                 let parsedLink = videoLink.slice(from: "\"", to: "\"")
-                seriesVC.streamURL = String ()
-                seriesVC.streamURL = parsedLink
-                episodeLink = (parsedLink)!
-                seriesVC.webView.loadRequest(URLRequest(url: URL(string: episodeLink)!))
+                let urlwithPercentEscapes = parsedLink?.addingPercentEncoding( withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+                if let url = URL(string: urlwithPercentEscapes!) {
+                    UIApplication.shared.open(url, options: [:])
+                }
+                
             } catch {
                 // contents could not be loaded
             }
@@ -106,6 +99,8 @@ var tableArray = [Items] ()
         }
     }
     }
+    
+
     
     func matches(for regex: String, in text: String) -> [String] {
      
@@ -119,9 +114,6 @@ var tableArray = [Items] ()
             return []
         }
     }
-
-
-}
 
 extension String {
     
